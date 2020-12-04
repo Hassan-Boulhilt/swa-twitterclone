@@ -19,5 +19,5 @@ from apps.core.views import frontpage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/',frontpage,name="home"),
+    path('',frontpage,name="frontpage"),
 ]

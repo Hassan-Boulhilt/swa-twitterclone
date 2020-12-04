@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def frontpage(request):
-    render(request,'core/frontpage.html',)
+    return render(request,'core/frontpage.html',)

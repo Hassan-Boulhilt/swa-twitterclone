@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def frontpage(request):
+    render(request,'core/frontpage.html',)

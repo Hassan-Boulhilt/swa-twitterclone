@@ -19,6 +19,7 @@ from django.contrib.auth import views
 
 
 from apps.core.views import frontpage, signup
+from apps.feed.views import feed
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,10 @@ urlpatterns = [
     path('signup/', signup, name='signup'),
     path('logout/', views.LogoutView.as_view(), name='logout'),
     path('login/', views.LoginView.as_view(template_name='core/login.html'), name="login"),
+    
+    #
+    # feed url
+
+    path('feed/', feed, name="feed" ),
+
 ]

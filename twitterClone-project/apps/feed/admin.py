@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 
-from .models import Twitt
+from .models import Twitte
 
-admin.site.register(Twitt)
+admin.site.register(Twitte)

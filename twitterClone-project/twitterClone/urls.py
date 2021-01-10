@@ -10,6 +10,12 @@ from apps.core.views import frontpage, signup
 from apps.feed.views import feed
 from apps.twitterprofile.views import twitterprofile
 
+from apps.feed.api import api_add_twitte
+
+
+
+
+
 
  
 
@@ -24,6 +30,12 @@ urlpatterns = [
     
     
     path('feed/', feed, name='feed'),
+
+
+    #
+    # API urls
+
+    path('api/add_twitte/',api_add_twitte, name='api_add_twitte'),
 
     #
     # Admin

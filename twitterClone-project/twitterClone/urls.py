@@ -31,6 +31,8 @@ urlpatterns = [
     
     path('feed/', feed, name='feed'),
     path('search/', search, name='search'),
+    path('u/<str:username>/',twitterprofile, name='twitterprofile'),
+
 
 
     #

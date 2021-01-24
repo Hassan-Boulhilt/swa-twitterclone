@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+
+{% load humanize %}
+
+{% block content %}
+  <div class="container">
+      <div class="columns">
+          <div class="column is-12">
+              <h1 class="title">{{ user.username }}</h1>
+          </div>
+      </div>
+  </div>
+  <div class="columns">
+      <div class="column is-8">
+          <div class="wrapper-twitts">
+              {% for twitt in user.twitts.all %}
+              <div class="twitt">
+                  <p class="name">{{twitt.created_by.username }}</p>
+                  <p>{{ twitt.body }}</p>
+                  <p class="info">{{twitt.created_at|naturaltime }}</p>
+              </div>
+
+              {% endfor %}
+          </div>
+      </div>
+  </div>
+{% endblock %}
